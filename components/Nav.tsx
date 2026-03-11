@@ -23,7 +23,7 @@ export function Nav() {
           href="/"
           className="font-medium text-brand-text hover:text-brand-accent transition-colors"
         >
-          portfolio
+          Portfolio
         </Link>
         <ul className="flex gap-6">
           {links.map(({ href, label }) => {

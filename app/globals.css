@@ -7,14 +7,19 @@
 /* ========== Design tokens ========== */
 :root {
   /* Colors — 中性为主，强调色节制 */
-  --color-bg: #0a0a0b;
-  --color-surface: #141416;
+  --color-bg: #050509;
+  --color-surface: #101018;
   --color-border: #27272a;
   --color-text: #fafafa;
   --color-text-muted: #a1a1aa;
   --color-accent: #e4e4e7;
   --color-accent-hover: #fafafa;
   --color-hero-accent: #6366F1;
+  /* 卡片霓虹风格 */
+  --color-card-bg: #0f1014;
+  --color-neon-border: rgba(56, 189, 248, 0.5);
+  --color-neon-glow: rgba(56, 189, 248, 0.25);
+  --color-neon-glow-strong: rgba(56, 189, 248, 0.4);
 
   /* Spacing — 8px 网格 */
   --space-page: clamp(1.5rem, 5vw, 3rem);
