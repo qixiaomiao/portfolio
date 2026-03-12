@@ -32,7 +32,7 @@ export const experiences: ExperienceItem[] = [
       {
         label: "赋能团队",
         text: "通过定期内部分享进行 AI 技术自学，独立探索并运用 vibe coding & 工作流，推动 AI 设计工具信息播报 & 效率站点落地；负责 CDP & AB 平台大模型接入场景，开展调研与机会探索并输出方案，当前已上线 7+ 产品功能。",
-        bold: ["vibe coding&工作流", "7+产品功能"],
+        bold: ["7+"],
       },
     ],
   },
@@ -55,7 +55,6 @@ export const experiences: ExperienceItem[] = [
       {
         label: "横向拓展",
         text: "探索并输出跨业务线营销套件产品能力调研与理解，推动相关业务线圈选事件、多变体模块迭代优化。",
-        bold: ["圈选事件", "多变体模块"],
       },
       {
         label: "专项合作",
@@ -65,7 +64,7 @@ export const experiences: ExperienceItem[] = [
       {
         label: "赋能设计",
         text: "及时项目总结与方法论分享，对内输出 8+ 设计经验与项目复盘，好评 4.7 星。",
-        bold: ["8+设计经验", "4.7星"],
+        bold: ["8+设计经验", "4.7 星"],
       },
     ],
   },
@@ -78,7 +77,7 @@ export const experiences: ExperienceItem[] = [
       {
         label: "0-1实践",
         text: "负责项目全生命周期管理，完成数智大屏平台 0-1 建设，支撑 11 个电子政务项目，推动项目总价值 1500万+ 元，与上海市公共资源交易中心共建「一网交易」平台，并支撑政府广阳岛虚幻引擎项目。",
-        bold: ["1500万+元", "一网交易", "广阳岛虚幻引擎"],
+        bold: ["1500万+", "一网交易"],
       },
     ],
   },
