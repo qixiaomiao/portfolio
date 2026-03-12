@@ -1,4 +1,4 @@
-# 齐莹 · 作品集网站
+# 半夏 · 作品集网站
 
 Next.js 作品集站点，含首页、关于、项目、联系；设计基于 CSS 变量（design tokens），便于统一调整风格。
 
@@ -23,10 +23,10 @@ rm -rf .next && npm run dev
 2. 命名为 **`portfolio.pdf`**（或任意文件名，见下）。
 3. 若使用其他文件名，在 **`app/page.tsx`** 中把「下载 PDF 作品集」按钮的 `href` 改为 `/你的文件名.pdf`。
 
-例如当前项目根目录的 `AI&数据高级设计师-齐莹.pdf`，可复制为：
+例如当前项目根目录的 `AI&数据高级设计师-半夏.pdf`，可复制为：
 
 ```bash
-cp "AI&数据高级设计师-齐莹.pdf" public/portfolio.pdf
+cp "AI&数据高级设计师-半夏.pdf" public/portfolio.pdf
 ```
 
 ## 填写内容

@@ -1,22 +1,25 @@
 import Image from "next/image";
 import { projects } from "@/data/projects";
 import { ProjectCardFan } from "@/components/ProjectCardFan";
+import { ContactPreloader } from "@/components/ContactPreloader";
 
+const introKeywordClass = "font-semibold text-[#6A6EF7]";
 const INTRO_LINES = [
-  <>擅长<strong className="text-[var(--color-hero-accent)]">AI 与数据</strong>驱动的<strong className="text-[var(--color-hero-accent)]">产品设计</strong>，深度解析<strong className="text-[var(--color-hero-accent)]">业务逻辑</strong>与<strong className="text-[var(--color-hero-accent)]">AI 能力</strong>边界，将复杂的<strong className="text-[var(--color-hero-accent)]">多模态</strong>交互、<strong className="text-[var(--color-hero-accent)]">Agent</strong> 流程转化为直观易用、可信可控的<strong className="text-[var(--color-hero-accent)]">企业级体验</strong>，提升产品落地效率与决策价值；</>,
-  <>具备<strong className="text-[var(--color-hero-accent)]">AI 产品</strong><strong className="text-[var(--color-hero-accent)]">系统架构</strong>思维与全局视野，善于跨团队协作，共同打造可拓展、可解释、高可靠性的<strong className="text-[var(--color-hero-accent)]">AI 解决方案</strong>；</>,
-  <>持续深耕<strong className="text-[var(--color-hero-accent)]">AIGC</strong>与<strong className="text-[var(--color-hero-accent)]">大模型</strong>应用设计，专注通过<strong className="text-[var(--color-hero-accent)]">可信设计</strong>、<strong className="text-[var(--color-hero-accent)]">可控交互</strong>、<strong className="text-[var(--color-hero-accent)]">数据可追溯</strong>机制降低 AI 幻觉风险，让<strong className="text-[var(--color-hero-accent)]">数据</strong>可信任、可组织、可自助使用，真正转化为<strong className="text-[var(--color-hero-accent)]">企业核心生产力</strong>。</>,
+  <>擅长<strong className={introKeywordClass}>AI 与数据</strong>驱动的<strong className={introKeywordClass}>产品设计</strong>，深度解析<strong className={introKeywordClass}>业务逻辑</strong>与<strong className={introKeywordClass}>AI 能力</strong>边界，将复杂的<strong className={introKeywordClass}>多模态</strong>交互、<strong className={introKeywordClass}>Agent</strong> 流程转化为直观易用、可信可控的<strong className={introKeywordClass}>企业级体验</strong>，提升产品落地效率与决策价值；</>,
+  <>具备<strong className={introKeywordClass}>AI 产品</strong><strong className={introKeywordClass}>系统架构</strong>思维与全局视野，善于跨团队协作，共同打造可拓展、可解释、高可靠性的<strong className={introKeywordClass}>AI 解决方案</strong>；</>,
+  <>持续深耕<strong className={introKeywordClass}>AIGC</strong>与<strong className={introKeywordClass}>大模型</strong>应用设计，专注通过<strong className={introKeywordClass}>可信设计</strong>、<strong className={introKeywordClass}>可控交互</strong>、<strong className={introKeywordClass}>数据可追溯</strong>机制降低 AI 幻觉风险，让<strong className={introKeywordClass}>数据</strong>可信任、可组织、可自助使用，真正转化为<strong className={introKeywordClass}>企业核心生产力</strong>。</>,
 ];
 
 export default function HomePage() {
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <ContactPreloader />
       <section
         className="relative grid gap-8 pt-[var(--space-section)] pb-[var(--space-section)] md:grid-cols-[1fr,minmax(280px,400px)] md:items-center"
         style={{ paddingTop: "var(--space-section)", paddingBottom: "var(--space-section)" }}
       >
         <div>
-          <p className="text-brand-text-muted text-xl sm:text-2xl">
+          <p className="text-xl sm:text-2xl leading-relaxed" style={{ color: "#e4e4e7" }}>
             你好，我是{" "}
             <span className="font-bold text-brand-text">半夏</span>
           </p>
@@ -26,15 +29,19 @@ export default function HomePage() {
           >
             AI & 数据高级设计师
           </h1>
-          <ul className="mt-5 list-disc space-y-2 pl-5 text-brand-text-muted leading-relaxed [&>li]:pl-1">
+          <ul className="mt-10 list-disc space-y-2 pl-5 leading-relaxed [&>li]:pl-1" style={{ color: "#e4e4e7" }}>
             {INTRO_LINES.map((line, i) => (
               <li key={i}>{line}</li>
             ))}
           </ul>
-          <div className="mt-6 flex flex-wrap gap-4">
+          <div className="mt-12 flex flex-wrap gap-4">
             <a
               href="#projects"
-              className="inline-flex items-center rounded-full bg-[var(--color-hero-accent)] px-5 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
+              className="inline-flex items-center rounded-full px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:scale-105 hover:shadow-[0_0_24px_rgba(37,99,235,0.4)] active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]"
+              style={{
+                background: "linear-gradient(135deg, #5c4fd8 0%, #5c4fd8 45%, #3b5bdb 75%, #2563eb 100%)",
+                boxShadow: "0 0 16px rgba(92,79,216,0.3)",
+              }}
             >
               查看项目 →
             </a>
@@ -63,105 +70,85 @@ export default function HomePage() {
       </section>
 
       <section
-        className="pb-[var(--space-section)]"
+        className="mt-10 pb-[var(--space-section)]"
         style={{ paddingBottom: "var(--space-section)" }}
       >
         <h2
-          className="text-center font-medium text-brand-text"
+          className="text-center font-semibold text-brand-text tracking-[0.08em] uppercase"
           style={{ fontSize: "var(--text-h2)" }}
         >
           核心能力
         </h2>
         <p className="mt-3 text-center text-sm text-brand-text-muted">
-          围绕AI&数据产品 构建可信任、可落地、可扩展的产品设计&用户体验
+          围绕 AI & 数据产品，构建可信任、可落地、可扩展的产品设计与用户体验体系
         </p>
-        <div className="mt-[var(--space-block)] grid gap-4 md:gap-6 md:grid-cols-2">
-          {/* AI 产品设计 */}
-          <div className="rounded-2xl border border-brand-border bg-brand-surface/40 px-5 py-4 backdrop-blur-sm">
-            <div className="flex items-center gap-2">
-              <span
-                className="h-2 w-2 rounded-sm"
-                style={{
-                  background:
-                    "linear-gradient(135deg, #60a5fa 0%, #6366f1 50%, #a855f7 100%)",
-                }}
-                aria-hidden
-              />
-              <h3 className="text-sm font-semibold text-brand-text">
+        <div className="mt-[var(--space-block)] grid gap-5 md:gap-7 md:grid-cols-2">
+          {/* 01 AI 产品设计 */}
+          <div className="rounded-2xl border border-brand-border bg-brand-surface/40 px-6 py-5 backdrop-blur-sm flex items-start gap-4">
+            <div className="shrink-0 flex h-14 w-14 items-center justify-center rounded-xl bg-white/[0.07] font-mono text-lg font-medium tabular-nums text-brand-text-muted">
+              01
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-brand-text">
                 AI 产品设计
               </h3>
+              <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm text-brand-text-muted leading-relaxed [&>li]:pl-1">
+                <li>大模型与生成式 AI 产品设计，覆盖从 0→1 到规模化落地</li>
+                <li>Copilot、Agent、多模态交互与 AI 能力边界定义</li>
+                <li>预期管理与体验约束设计，让 AI 可控、可解释</li>
+              </ul>
             </div>
-            <ul className="mt-3 space-y-1.5 text-sm text-brand-text-muted leading-relaxed">
-              <li>大模型应用 / 生成式 AI 产品设计</li>
-              <li>Copilot、Agent、多模态交互设计</li>
-              <li>AI 能力边界定义与预期管理</li>
-            </ul>
           </div>
 
-          {/* 可信 & 可控设计 */}
-          <div className="rounded-2xl border border-brand-border bg-brand-surface/40 px-5 py-4 backdrop-blur-sm">
-            <div className="flex items-center gap-2">
-              <span
-                className="h-2 w-2 rounded-sm"
-                style={{
-                  background:
-                    "linear-gradient(135deg, #60a5fa 0%, #6366f1 50%, #a855f7 100%)",
-                }}
-                aria-hidden
-              />
-              <h3 className="text-sm font-semibold text-brand-text">
+          {/* 02 可信 & 可控设计 */}
+          <div className="rounded-2xl border border-brand-border bg-brand-surface/40 px-6 py-5 backdrop-blur-sm flex items-start gap-4">
+            <div className="shrink-0 flex h-14 w-14 items-center justify-center rounded-xl bg-white/[0.07] font-mono text-lg font-medium tabular-nums text-brand-text-muted">
+              02
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-brand-text">
                 可信 &amp; 可控设计
               </h3>
+              <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm text-brand-text-muted leading-relaxed [&>li]:pl-1">
+                <li>过程透明、输出可校验，建立可追溯的信任机制</li>
+                <li>可编辑、可干预、可回滚的人机协同与兜底设计</li>
+                <li>企业级安全、合规与隐私体验设计</li>
+              </ul>
             </div>
-            <ul className="mt-3 space-y-1.5 text-sm text-brand-text-muted leading-relaxed">
-              <li>过程透明化、输出可校验的信任建立</li>
-              <li>可编辑、可干预、可回滚的人机协同机制</li>
-              <li>企业级安全、合规、隐私设计</li>
-            </ul>
           </div>
 
-          {/* 数据产品体验 */}
-          <div className="rounded-2xl border border-brand-border bg-brand-surface/40 px-5 py-4 backdrop-blur-sm">
-            <div className="flex items-center gap-2">
-              <span
-                className="h-2 w-2 rounded-sm"
-                style={{
-                  background:
-                    "linear-gradient(135deg, #60a5fa 0%, #6366f1 50%, #a855f7 100%)",
-                }}
-                aria-hidden
-              />
-              <h3 className="text-sm font-semibold text-brand-text">
+          {/* 03 数据产品体验 */}
+          <div className="rounded-2xl border border-brand-border bg-brand-surface/40 px-6 py-5 backdrop-blur-sm flex items-start gap-4">
+            <div className="shrink-0 flex h-14 w-14 items-center justify-center rounded-xl bg-white/[0.07] font-mono text-lg font-medium tabular-nums text-brand-text-muted">
+              03
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-brand-text">
                 数据产品体验
               </h3>
+              <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm text-brand-text-muted leading-relaxed [&>li]:pl-1">
+                <li>自然语言驱动自助分析，降低数据使用门槛</li>
+                <li>多模态数据整合与结构化展示，支撑洞察与决策</li>
+                <li>数据可视化与决策动线设计，提升可读性与行动转化</li>
+              </ul>
             </div>
-            <ul className="mt-3 space-y-1.5 text-sm text-brand-text-muted leading-relaxed">
-              <li>自然语言驱动自助式数据分析</li>
-              <li>多模态数据标准化处理&结构化展示</li>
-              <li>洞察发现与决策支持设计</li>
-            </ul>
           </div>
 
-          {/* 系统 & 架构思维 */}
-          <div className="rounded-2xl border border-brand-border bg-brand-surface/40 px-5 py-4 backdrop-blur-sm">
-            <div className="flex items-center gap-2">
-              <span
-                className="h-2 w-2 rounded-sm"
-                style={{
-                  background:
-                    "linear-gradient(135deg, #60a5fa 0%, #6366f1 50%, #a855f7 100%)",
-                }}
-                aria-hidden
-              />
-              <h3 className="text-sm font-semibold text-brand-text">
+          {/* 04 系统 & 架构思维 */}
+          <div className="rounded-2xl border border-brand-border bg-brand-surface/40 px-6 py-5 backdrop-blur-sm flex items-start gap-4">
+            <div className="shrink-0 flex h-14 w-14 items-center justify-center rounded-xl bg-white/[0.07] font-mono text-lg font-medium tabular-nums text-brand-text-muted">
+              04
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-brand-text">
                 系统 &amp; 架构思维
               </h3>
+              <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm text-brand-text-muted leading-relaxed [&>li]:pl-1">
+                <li>0→1 企业级产品架构与可扩展、可复用设计体系</li>
+                <li>高可用与多端协同，支撑业务规模化与迭代</li>
+                <li>跨团队协同与交付落地</li>
+              </ul>
             </div>
-            <ul className="mt-3 space-y-1.5 text-sm text-brand-text-muted leading-relaxed">
-              <li>0→1 企业级产品架构与系统设计</li>
-              <li>高可用、可扩展、可复用设计体系</li>
-              <li>跨团队协同</li>
-            </ul>
           </div>
         </div>
       </section>
@@ -172,7 +159,7 @@ export default function HomePage() {
         style={{ paddingBottom: "var(--space-section)" }}
       >
         <h2
-          className="mb-[var(--space-block)] text-center font-medium text-brand-text"
+          className="mb-[var(--space-block)] text-center font-semibold text-brand-text"
           style={{ fontSize: "var(--text-h2)" }}
         >
           项目展示

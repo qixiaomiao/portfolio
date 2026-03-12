@@ -37,6 +37,9 @@
   --text-small: 0.875rem;
   --leading-tight: 1.2;
   --leading-normal: 1.6;
+  /* 关于页：正文与强调 */
+  --color-about-body: #e0e0e0;
+  --color-about-accent: rgba(129, 140, 248, 0.95);
 }
 
 /* 可选：浅色主题（通过 class 切换） */

@@ -172,7 +172,7 @@ export function ProjectCard({ project, isActive = false, fixedSize = false }: Pr
                   </span>
                 ))}
               </div>
-              <span className="mt-3 inline-flex items-center text-xs font-medium text-white">
+              <span className="mt-3 inline-flex items-center pl-1.5 text-xs font-medium text-white">
                 查看详情 →
               </span>
             </div>

@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "齐莹 · AI & 数据高级设计师",
+  title: "半夏 · AI & 数据高级设计师",
   description: "作品集与项目案例",
 };
 
@@ -28,8 +28,9 @@ export default function RootLayout({
     <html
       lang="zh-CN"
       className={cn(jetbrainsMono.variable, "font-sans", inter.variable)}
+      suppressHydrationWarning
     >
-      <body className="relative min-h-screen flex flex-col">
+      <body className="relative min-h-screen flex flex-col" suppressHydrationWarning>
         <FullPageLiquidBackground />
         <div className="relative z-10 flex min-h-screen flex-col">
           <Nav />

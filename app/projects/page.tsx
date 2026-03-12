@@ -3,8 +3,8 @@ import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
 
 export const metadata: Metadata = {
-  title: "项目 · 齐莹",
-  description: "齐莹的作品与项目案例",
+  title: "项目 · 半夏",
+  description: "半夏的作品与项目案例",
 };
 
 export default function ProjectsPage() {

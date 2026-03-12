@@ -349,6 +349,8 @@ const PixelBlast = ({
     if (mustReinit) {
       if (threeRef.current) {
         const t = threeRef.current;
+        if (t.onPointerDown) container.removeEventListener('pointerdown', t.onPointerDown);
+        if (t.onPointerMove) container.removeEventListener('pointermove', t.onPointerMove);
         t.resizeObserver?.disconnect();
         cancelAnimationFrame(t.raf);
         t.quad?.geometry.dispose();
@@ -465,17 +467,15 @@ const PixelBlast = ({
       }
       if (composer) composer.setSize(renderer.domElement.width, renderer.domElement.height);
       const mapToPixels = e => {
-        const rect = renderer.domElement.getBoundingClientRect();
-        const scaleX = renderer.domElement.width / rect.width;
-        const scaleY = renderer.domElement.height / rect.height;
+        const el = container;
+        const rect = el.getBoundingClientRect();
+        const w = renderer.domElement.width;
+        const h = renderer.domElement.height;
+        const scaleX = w / (rect.width || 1);
+        const scaleY = h / (rect.height || 1);
         const fx = (e.clientX - rect.left) * scaleX;
         const fy = (rect.height - (e.clientY - rect.top)) * scaleY;
-        return {
-          fx,
-          fy,
-          w: renderer.domElement.width,
-          h: renderer.domElement.height
-        };
+        return { fx, fy, w, h };
       };
       const onPointerDown = e => {
         const { fx, fy } = mapToPixels(e);
@@ -489,12 +489,8 @@ const PixelBlast = ({
         const { fx, fy, w, h } = mapToPixels(e);
         touch.addTouch({ x: fx / w, y: fy / h });
       };
-      renderer.domElement.addEventListener('pointerdown', onPointerDown, {
-        passive: true
-      });
-      renderer.domElement.addEventListener('pointermove', onPointerMove, {
-        passive: true
-      });
+      container.addEventListener('pointerdown', onPointerDown, { passive: true });
+      container.addEventListener('pointermove', onPointerMove, { passive: true });
       let raf = 0;
       const animate = () => {
         if (autoPauseOffscreen && !visibilityRef.current.visible) {
@@ -532,7 +528,9 @@ const PixelBlast = ({
         timeOffset,
         composer,
         touch,
-        liquidEffect
+        liquidEffect,
+        onPointerDown,
+        onPointerMove
       };
     } else {
       const t = threeRef.current;
@@ -562,6 +560,8 @@ const PixelBlast = ({
       if (threeRef.current && mustReinit) return;
       if (!threeRef.current) return;
       const t = threeRef.current;
+      if (t.onPointerDown) container.removeEventListener('pointerdown', t.onPointerDown);
+      if (t.onPointerMove) container.removeEventListener('pointermove', t.onPointerMove);
       t.resizeObserver?.disconnect();
       cancelAnimationFrame(t.raf);
       t.quad?.geometry.dispose();
