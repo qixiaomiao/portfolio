@@ -117,14 +117,14 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* 03 数据产品体验 */}
+          {/* 03 数据驱动设计优化 */}
           <div className="rounded-2xl border border-brand-border bg-brand-surface/40 px-6 py-5 backdrop-blur-sm flex items-start gap-4">
             <div className="shrink-0 flex h-14 w-14 items-center justify-center rounded-xl bg-white/[0.07] font-mono text-lg font-medium tabular-nums text-brand-text-muted">
               03
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="text-lg font-semibold text-brand-text">
-                数据产品体验
+                数据驱动设计优化
               </h3>
               <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm text-brand-text-muted leading-relaxed [&>li]:pl-1">
                 <li>自然语言驱动自助分析，降低数据使用门槛</li>
