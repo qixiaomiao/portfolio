@@ -127,9 +127,9 @@ export default function HomePage() {
                 数据驱动设计优化
               </h3>
               <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm text-brand-text-muted leading-relaxed [&>li]:pl-1">
-                <li>自然语言驱动自助分析，降低数据使用门槛</li>
-                <li>多模态数据整合与结构化展示，支撑洞察与决策</li>
-                <li>数据可视化与决策动线设计，提升可读性与行动转化</li>
+                <li>用数据锚定设计目标，替代主观判断</li>
+                <li>用行为数据定位设计卡点，反推信息架构问题</li>
+                <li>建立 “设计上线→数据验证→迭代优化” 闭环</li>
               </ul>
             </div>
           </div>
@@ -141,12 +141,12 @@ export default function HomePage() {
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="text-lg font-semibold text-brand-text">
-                系统 &amp; 架构思维
+                系统架构与产品设计
               </h3>
               <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm text-brand-text-muted leading-relaxed [&>li]:pl-1">
-                <li>0→1 企业级产品架构与可扩展、可复用设计体系</li>
-                <li>高可用与多端协同，支撑业务规模化与迭代</li>
-                <li>跨团队协同与交付落地</li>
+                <li>0→1 企业级产品架构探索与落地</li>
+                <li>可扩展、可复用设计体系，支撑业务规模化与迭代</li>
+                <li>跨团队协作，共同打造高可用的 AI 解决方案</li>
               </ul>
             </div>
           </div>
