@@ -117,7 +117,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* 03 数据驱动设计优化 */}
+          {/* 03 数据产品体验 */}
           <div className="rounded-2xl border border-brand-border bg-brand-surface/40 px-6 py-5 backdrop-blur-sm flex items-start gap-4">
             <div className="shrink-0 flex h-14 w-14 items-center justify-center rounded-xl bg-white/[0.07] font-mono text-lg font-medium tabular-nums text-brand-text-muted">
               03
@@ -127,14 +127,14 @@ export default function HomePage() {
                 数据驱动设计优化
               </h3>
               <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm text-brand-text-muted leading-relaxed [&>li]:pl-1">
-                <li>用数据锚定设计目标，替代主观判断</li>
+                <li>数据锚定设计目标，替代主观判断</li>
                 <li>用行为数据定位设计卡点，反推信息架构问题</li>
                 <li>建立 “设计上线→数据验证→迭代优化” 闭环</li>
               </ul>
             </div>
           </div>
 
-          {/* 04 系统 & 架构思维 */}
+          {/* 04 系统架构与产品设计 */}
           <div className="rounded-2xl border border-brand-border bg-brand-surface/40 px-6 py-5 backdrop-blur-sm flex items-start gap-4">
             <div className="shrink-0 flex h-14 w-14 items-center justify-center rounded-xl bg-white/[0.07] font-mono text-lg font-medium tabular-nums text-brand-text-muted">
               04
