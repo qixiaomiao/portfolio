@@ -25,6 +25,7 @@ function projectBaseUrl(slug: string): string {
 }
 
 export function projectImageUrl(project: Project, filename: string): string {
+  if (filename.startsWith("/")) return filename;
   return `${projectBaseUrl(project.slug)}/${filename}`;
 }
 
@@ -91,7 +92,26 @@ export const projects: Project[] = [
     role: "产品 / 设计",
     tags: ["设计探索", "落地实践"],
     year: "2024",
-    images: ["66.png", "67.png", "68.png", "69.png", "70.png", "71.png", "72.png", "73.png", "74.png", "75.png", "76.png", "77.png", "78.png", "79.png"],
+    images: [
+      "66.png",
+      "67.png",
+      "68.png",
+      "69.png",
+      "70.png",
+      "71.png",
+      "72.png",
+      "73.png",
+      "74.png",
+      "75.png",
+      "/81.png",
+      "/82.png",
+      "/83.png",
+      "/84.png",
+      "76.png",
+      "77.png",
+      "78.png",
+      "79.png",
+    ],
     icon: "/projects/icons/futher-039c77bc-c2d3-45ba-a5d8-a9c577897f25.png",
     cardLabel: "个人实践",
   },

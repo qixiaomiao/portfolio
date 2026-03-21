@@ -26,7 +26,10 @@ export default async function ProjectDetailPage({ params }: Props) {
   const project = getProjectByUrlSlug(slug);
   if (!project) notFound();
 
-  const imageFilenames = getProjectImageFilenames(project.slug);
+  const imageFilenames =
+    project.images && project.images.length > 0
+      ? project.images
+      : getProjectImageFilenames(project.slug);
 
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6">
